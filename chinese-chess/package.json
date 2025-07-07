@@ -1,0 +1,29 @@
+{
+  "name": "chinese-chess",
+  "version": "1.0.0",
+  "description": "Chinese Chess Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/**/*.ts --format progress --format html:reports/cucumber-report.html",
+    "test:init": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/init-steps.ts --tags \"@init\"",
+    "test:general": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/general-steps.ts --tags \"@General\"",
+    "test:guard": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/guard-steps.ts --tags \"@Guard\"",
+    "test:rook": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/rook-steps.ts --tags \"@Rook\"",
+    "test:horse": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/horse-steps.ts --tags \"@Horse\"",
+    "test:cannon": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/cannon-steps.ts --tags \"@Cannon\"",
+    "test:elephant": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/elephant-steps.ts --tags \"@Elephant\"",
+    "test:soldier": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/soldier-steps.ts --tags \"@Soldier\"",
+    "test:winning": "cucumber-js features/chinese-chess.feature --require-module ts-node/register --require steps/common-steps.ts --require steps/winning-steps.ts --tags \"@Winning\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@types/jest": "^29.5.12",
+    "cucumber-html-reporter": "^7.1.1",
+    "jest": "^29.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
